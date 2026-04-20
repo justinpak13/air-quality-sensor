@@ -14,3 +14,6 @@ An air quality sensor that displays the eC02 and TVOC level using the Rust Embas
 Once all hardware is assembled, build the project. Then plug in the pico while holding the bootsel button and release. 
 
 Then run cargo run
+
+## Example
+[![example](./example.jpg)](./example.jpg)
