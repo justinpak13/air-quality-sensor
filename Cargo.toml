@@ -1,0 +1,43 @@
+[package]
+name = "air_quality_sensor"
+version = "0.2.0"
+edition = "2024"
+
+[dependencies]
+# Cortex-M 
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+
+# Panic Handler
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+
+# Embassy
+embassy-executor = { version = "0.9", features = [
+  "arch-cortex-m",
+  "executor-thread",
+  "defmt",
+] }
+embassy-time = { version = "0.5.0" }
+embassy-rp = { version = "0.9.0", features = [
+  "time-driver",
+  "critical-section-impl",
+  "rp235xa",
+  "binary-info",
+  "defmt",
+] }
+embassy-futures = {version = "0.1"}
+embassy-sync = {version = "0.6"}
+
+# Defmt Logging
+defmt = "1.0.1"
+defmt-rtt = "1.1.0"
+
+# usb logger
+embassy-usb-logger = "0.5.1"
+log = "0.4"
+
+# display
+sh1106 = "0.5.0"
+embedded-graphics = "0.8.0"
+embedded-hal-bus = "0.3.0"
+display-interface-spi = "0.4"
